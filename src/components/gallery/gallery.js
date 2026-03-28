@@ -19,50 +19,15 @@ export default function GallerySection() {
     "/herosection.jpeg",
   ];
 
-  /* 🔥 Animations */
-
-  const container = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.12,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 40 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
-
-  const section = {
-    hidden: { opacity: 0, y: 50 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
   return (
-    <motion.section
-      variants={section}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      className="w-full bg-white md:py-16 py-8"
-    >
+    <section className="w-full bg-white md:py-16 py-8">
       <div className="max-w-7xl mx-auto md:px-6 px-2">
-        {/* Header */}
+        {/* 🔥 Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
           className="mb-14 text-center"
         >
           <h2 className="md:text-5xl text-4xl font-bold Arimo">
@@ -77,18 +42,19 @@ export default function GallerySection() {
           <div className="w-16 h-1 bg-[#6f4e37] mx-auto mt-6"></div>
         </motion.div>
 
-        {/* Grid */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-6 gap-2"
-        >
+        {/* 🔥 Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-6 gap-2">
           {images.map((img, index) => (
             <motion.div
               key={index}
-              variants={item}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{
+                duration: 0.6,
+                ease: [0.22, 1, 0.36, 1],
+                delay: index * 0.08,
+              }}
               whileHover={{ scale: 1.03 }}
               className="relative h-64 overflow-hidden rounded-xl cursor-pointer group"
               onClick={() => setActiveImage(img)}
@@ -115,10 +81,10 @@ export default function GallerySection() {
               />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
-      {/* 🔥 MODAL WITH ANIMATION */}
+      {/* 🔥 MODAL */}
       <AnimatePresence>
         {activeImage && (
           <motion.div
@@ -136,13 +102,13 @@ export default function GallerySection() {
               <X size={32} />
             </button>
 
-            {/* Image Container */}
+            {/* Image */}
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="relative w-full max-w-4xl h-[70vh]"
+              transition={{ duration: 0.35 }}
+              className="relative w-full max-w-5xl h-[75vh]"
             >
               <Image
                 src={activeImage}
@@ -154,7 +120,7 @@ export default function GallerySection() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.section>
+    </section>
   );
 }
 // "use client";

@@ -7,51 +7,16 @@ import { motion } from "framer-motion";
 
 export default function BlogPage() {
 
-  /* 🔥 Animations */
-
-  const container = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 40 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
-
-  const section = {
-    hidden: { opacity: 0, y: 50 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
   return (
-    <motion.div
-      variants={section}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      className="w-full h-full bg-white"
-    >
+    <div className="w-full h-full bg-white">
       <section className="max-w-7xl mx-auto px-6 md:pb-20 md:pt-12 py-6">
 
-        {/* HEADER */}
+        {/* 🔥 HEADER */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
           className="mb-14 text-center"
         >
           <h2 className="md:text-5xl text-4xl font-bold Arimo">
@@ -65,24 +30,25 @@ export default function BlogPage() {
           <div className="w-16 h-1 bg-[#6f4e37] mx-auto mt-6"></div>
         </motion.div>
 
-        {/* GRID */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
-        >
-          {blogs.map((blog) => (
+        {/* 🔥 GRID */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {blogs.map((blog, index) => (
             <motion.div
               key={blog.slug}
-              variants={item}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{
+                duration: 0.6,
+                ease: [0.22, 1, 0.36, 1],
+                delay: index * 0.08, // 🔥 natural stagger
+              }}
               whileHover={{ y: -6 }}
-              transition={{ type: "spring", stiffness: 200 }}
+              className="will-change-transform"
             >
               <Link href={`/Blog/${blog.slug}`} className="group">
 
-                {/* IMAGE */}
+                {/* 🔥 IMAGE */}
                 <div className="relative h-60 rounded-xl overflow-hidden">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
@@ -98,7 +64,7 @@ export default function BlogPage() {
                   </motion.div>
                 </div>
 
-                {/* CONTENT */}
+                {/* 🔥 CONTENT */}
                 <p className="text-sm text-gray-400 mt-4">
                   {blog.date}
                 </p>
@@ -114,10 +80,10 @@ export default function BlogPage() {
               </Link>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
       </section>
-    </motion.div>
+    </div>
   );
 }
 // import Image from "next/image";
