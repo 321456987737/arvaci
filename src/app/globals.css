@@ -1,26 +1,148 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* html {
+  scroll-behavior: smooth;
+} */
+.Arimo {
+  font-family: "Philosopher", cursive;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto);
+    gap: 8px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.div1 { grid-row: 1; }
+.div2 { grid-row: 2; }
+.div3 { grid-row: 3; }
+.div4 { grid-row: 4; }
+.div5 { grid-row: 5; }
+.div6 { grid-row: 6; }
+.div7 { grid-row: 7; }
+body{
+  background-color: #F9F7F5;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.left,
+.right {
+  display: flex;
+  gap: 30px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+.nav-item {
+  position: relative;
+  padding-bottom: 1px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s ease;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-item[data-active="true"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  background: #000;
+}
+
+.nav-item[data-active="true"] {
+  color: #000;
+}
+
+
+
+.embla {
+  margin: 2rem auto;
+  --slide-spacing: 1rem;
+  --slide-size: 40%;
+  height: 500px; /* carousel height */
+}
+@media (max-width: 768px) {
+  .embla {
+    --slide-size: 60%;
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+  height: 100%;
+  align-items: center; /* vertically center the wrappers */
+}
+
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  height: 100%;
+  display: flex;
+  align-items: center;     /* center the wrapper vertically */
+  justify-content: center;
+}
+
+.heightWrapper {
+  width: 100%;
+  border-radius: 1.5rem;
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+  transition: height 0.1s ease-out;
+  overflow: hidden;        /* so content doesn't spill out when height changes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.embla__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.embla__button {
+  padding: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.2s;
+}
+
+.embla__button:hover {
+  background: #F9F7F5;
+}
+/* {<svg xmlns="http://www.w3.org/2000/svg" width="180" height="60" fill="none" viewBox="0 0 533 117"><path fill="#000" d="M21.3125 115.614h-20.5l57.5-114.49993L115.812 115.614H94.3125l-36-72.9999zM235.312 1.11407h-21l57 114.49993 57-114.49993h-21l-36 71.49993zM298.812 115.614l57.5-114.49993 58.5 114.49993h-21l-37.5-71.9999-36 71.9999zM489.312 30.1141l13-12.5s-19.019-15.72182-35-16.50003c-32.96-1.60507-63.795 26.52613-62.5 59.50003 1.248 31.7618 28.275 56.9649 60 54.9999 16.13-.999 37.5-17.5 37.5-17.5l-13-12.5c-4.5 11.4876-56.5 24.988-65-24.9999 3.5-53.51254 52-43 65-30.5M532.312 1.11407h-18l-.5 113.49993 18.5 1z"/><path fill="#000" fillRule="evenodd" d="M121.312 1.11407V115.614h19v-38.5h32.5l22 38.5h23l-25.5-41s24-8.4983 24-36.4983c-2-18.0016-13-35.51325-33.5-37.01325-8-.500869-61.5.01162-61.5.01162m17.5 19.00003 1.5 37s33.5.5 44.5 0c2.5-.1137 13-3.5 13-17.5.583-9.2973-6-17.5-14.5-19.5-5.196-1.2992-44.5 0-44.5 0" clipRule="evenodd"/><path stroke="#000" d="M21.3125 115.614h-20.5l57.5-114.49993L115.812 115.614H94.3125l-36-72.9999zM235.312 1.11407h-21l57 114.49993 57-114.49993h-21l-36 71.49993zM298.812 115.614l57.5-114.49993 58.5 114.49993h-21l-37.5-71.9999-36 71.9999zM489.312 30.1141l13-12.5s-19.019-15.72182-35-16.50003c-32.96-1.60507-63.795 26.52613-62.5 59.50003 1.248 31.7618 28.275 56.9649 60 54.9999 16.13-.999 37.5-17.5 37.5-17.5l-13-12.5c-4.5 11.4876-56.5 24.988-65-24.9999 3.5-53.51254 52-43 65-30.5ZM532.312 1.11407h-18l-.5 113.49993 18.5 1z"/><path stroke="#000" d="M121.312 1.11407V115.614h19v-38.5h32.5l22 38.5h23l-25.5-41s24-8.4983 24-36.4983c-2-18.0016-13-35.51325-33.5-37.01325-8-.500869-61.5.01162-61.5.01162Zm17.5 19.00003 1.5 37s33.5.5 44.5 0c2.5-.1137 13-3.5 13-17.5.583-9.2973-6-17.5-14.5-19.5-5.196-1.2992-44.5 0-44.5 0Z" clipRule="evenodd"/></svg>} */
+
+
+

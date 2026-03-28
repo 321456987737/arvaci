@@ -1,0 +1,123 @@
+"use client";
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+const drinks = [
+  {
+    name: "Espresso",
+    desc: "Strong and bold shot of pure coffee flavor.",
+    price: "$3.50",
+    img: "/coffee/OIP-Picsart-BackgroundRemover.jpg",
+  },
+  {
+    name: "Cappuccino",
+    desc: "Rich espresso with steamed milk and foam.",
+    price: "$4.50",
+    img: "/coffee/Cappuccino-Picsart-BackgroundRemover.webp",
+  },
+  {
+    name: "Latte",
+    desc: "Smooth espresso blended with creamy milk.",
+    price: "$4.75",
+    img: "/coffee/latte.webp",
+  },
+  {
+    name: "Cold Brew",
+    desc: "Slow brewed coffee served chilled and refreshing.",
+    price: "$4.00",
+    img: "/coffee/coldbrew.webp",
+  },
+];
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15, // 👈 controls delay between items
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 40, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+export default function Menusection() {
+
+  
+  return (
+    <section className="w-full py-15     bg-[#ffffff]">
+      <div className="max-w-7xl mx-auto md:px-6 px-2">
+        {/* Heading */}
+        <div className="text-center md:mb-20 mb-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            className="text-4xl md:text-5xl Arimo font-semibold mt-3 mb-8"
+          >
+            Featured Drinks
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-gray-500 mt-4 max-w-xl mx-auto"
+          >
+            Discover our most loved handcrafted coffee drinks made with freshly
+            roasted beans and premium ingredients.
+          </motion.p>
+        </div>
+
+        {/* Products */}
+        <motion.div
+  variants={container}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.2 }}
+  className="grid grid-cols-2 lg:grid-cols-4 md:gap-10 gap-3"
+>
+         {drinks.map((drink, index) => (
+  <motion.div
+    key={index}
+    variants={item}
+    className="group rounded-3xl md:p-6 transition duration-300"
+  >
+    {/* Image */}
+    <div className="relative flex justify-center items-center mb-6 h-[150px]">
+      <Image
+        src={drink.img}
+        alt={drink.name}
+        fill
+        className="object-contain group-hover:scale-110 transition duration-300"
+      />
+    </div>
+
+    {/* Info */}
+    <div className="flex items-center justify-between mt-6 w-full">
+      <h3 className="text-[18px] font-semibold text-center Arimo">
+        {drink.name}
+      </h3>
+      <span className="text-lg font-semibold text-[#6f4e37]">
+        {drink.price}
+      </span>
+    </div>
+
+    <p className="text-gray-500 text-sm mt-3 text-[14px]">
+      {drink.desc}
+    </p>
+  </motion.div>
+))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
