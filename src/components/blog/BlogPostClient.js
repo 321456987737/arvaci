@@ -19,7 +19,7 @@ export default function BlogPostClient({ blog }) {
     <div className="w-full bg-white">
 
       {/* 🔥 HERO */}
-      <div className="relative w-full h-[60vh] overflow-hidden">
+      <div className="relative w-full md:h-[60vh] h-[45vh] overflow-hidden">
         <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
