@@ -49,7 +49,7 @@ export default function CafeExperienceProfessional() {
 
   return (
     <section className="md:py-20 py-8 bg-[#faf7f4]">
-      <div className="max-w-7xl mx-auto px-6 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-6 overflow-hidden">
 
         {/* Header */}
         <motion.div

@@ -53,7 +53,7 @@ export default function GallerySection() {
               transition={{
                 duration: 0.6,
                 ease: [0.22, 1, 0.36, 1],
-                delay: index * 0.08,
+                delay: index * 0.03,
               }}
               whileHover={{ scale: 1.03 }}
               className="relative h-64 overflow-hidden rounded-xl cursor-pointer group"
