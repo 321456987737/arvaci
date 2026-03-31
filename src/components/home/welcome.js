@@ -46,7 +46,7 @@ const Welcome = () => {
       </div>
 
       {/* RIGHT SIDE GRID */}
-      <div className="w-full md:h-screen md:w-1/2 grid md:grid-cols-12 md:grid-rows-12 grid-cols-5 grid-rows-11  md:gap-4 gap-2 md:py-10 pb-6  px-2 md:px-0 h-125 ">
+      <div className="w-full overflow-hidden md:h-screen md:w-1/2 grid md:grid-cols-12 md:grid-rows-12 grid-cols-5 grid-rows-11  md:gap-4 gap-2 md:py-10 pb-6  px-2 md:px-0 h-125 ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -98,6 +98,24 @@ const Welcome = () => {
             className="w-full h-full object-cover"
           />
         </motion.div>
+
+        <div className="md:hidden flex col-start-3 col-end-6  row-start-10 row-end-12 w-full h-full  ">
+          <div className="flex items-center justify-center w-full ">
+            <h2 className="text-5xl Arimo">
+
+          ARVACI
+            </h2>
+          </div>
+        </div>
+        <div className="md:hidden flex col-start-5 col-end-6  row-start-1 row-end-5    rotate-270    ">
+          <div className="flex items-center justify-center   ">
+            <h2 className="text-xl Arimo">
+
+          Welcome
+            </h2>
+          </div>
+        </div>
+
       </div>
     </div>
   );

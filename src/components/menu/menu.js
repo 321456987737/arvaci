@@ -309,9 +309,6 @@ export default function MenuSection() {
           ))}
         </div>
         <div>
-          <button>
-            mamamia
-          </button>
         </div>
       </div>
     </section>
