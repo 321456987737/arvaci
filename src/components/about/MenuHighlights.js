@@ -3,54 +3,115 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+// const drinks = [
+//   {
+//     name: "Espresso",
+//     desc: "Strong and bold shot of pure coffee flavor.",
+//     price: "$3.50",
+//     img: "/coffee/OIP-Picsart-BackgroundRemover.jpg",
+//   },
+//   {
+//     name: "Cappuccino",
+//     desc: "Rich espresso with steamed milk and foam.",
+//     price: "$4.50",
+//     img: "/coffee/Cappuccino-Picsart-BackgroundRemover.webp",
+//   },
+//   {
+//     name: "Espresso",
+//     desc: "Strong and bold shot of pure coffee flavor.",
+//     price: "$3.50",
+//     img: "/coffee/OIP-Picsart-BackgroundRemover.jpg",
+//   },
+//   {
+//     name: "Cappuccino",
+//     desc: "Rich espresso with steamed milk and foam.",
+//     price: "$4.50",
+//     img: "/coffee/Cappuccino-Picsart-BackgroundRemover.webp",
+//   },
+//   {
+//     name: "Cold Brew",
+//     desc: "Slow brewed coffee served chilled and refreshing.",
+//     price: "$4.00",
+//     img: "/coffee/coldbrew.webp",
+//   },
+//   {
+//     name: "Cappuccino",
+//     desc: "Rich espresso with steamed milk and foam.",
+//     price: "$4.50",
+//     img: "/coffee/Cappuccino-Picsart-BackgroundRemover.webp",
+//   },
+//   {
+//     name: "Latte",
+//     desc: "Smooth espresso blended with creamy milk.",
+//     price: "$4.75",
+//     img: "/coffee/Latte.webp",
+//   },
+//   {
+//     name: "Cold Brew",
+//     desc: "Slow brewed coffee served chilled and refreshing.",
+//     price: "$4.00",
+//     img: "/coffee/coldbrew.webp",
+//   },
+// ];
+
 const drinks = [
   {
     name: "Espresso",
     desc: "Strong and bold shot of pure coffee flavor.",
     price: "$3.50",
     img: "/coffee/OIP-Picsart-BackgroundRemover.jpg",
+    category: "coffee",
   },
   {
     name: "Cappuccino",
     desc: "Rich espresso with steamed milk and foam.",
     price: "$4.50",
     img: "/coffee/Cappuccino-Picsart-BackgroundRemover.webp",
-  },
-  {
-    name: "Espresso",
-    desc: "Strong and bold shot of pure coffee flavor.",
-    price: "$3.50",
-    img: "/coffee/OIP-Picsart-BackgroundRemover.jpg",
-  },
-  {
-    name: "Cappuccino",
-    desc: "Rich espresso with steamed milk and foam.",
-    price: "$4.50",
-    img: "/coffee/Cappuccino-Picsart-BackgroundRemover.webp",
-  },
-  {
-    name: "Cold Brew",
-    desc: "Slow brewed coffee served chilled and refreshing.",
-    price: "$4.00",
-    img: "/coffee/coldbrew.webp",
-  },
-  {
-    name: "Cappuccino",
-    desc: "Rich espresso with steamed milk and foam.",
-    price: "$4.50",
-    img: "/coffee/Cappuccino-Picsart-BackgroundRemover.webp",
+    category: "coffee",
   },
   {
     name: "Latte",
     desc: "Smooth espresso blended with creamy milk.",
     price: "$4.75",
-    img: "/coffee/latte.webp",
+    img: "/coffee/Latte.webp",
+    category: "coffee",
   },
   {
     name: "Cold Brew",
     desc: "Slow brewed coffee served chilled and refreshing.",
     price: "$4.00",
     img: "/coffee/coldbrew.webp",
+    category: "coffee",
+  },
+
+  // ☕ FOOD ITEMS
+  {
+    name: "Croissant",
+    desc: "Buttery, flaky pastry baked fresh daily.",
+    price: "$2.50",
+    img: "/food/croissants.png",
+    category: "food",
+  },
+  {
+    name: "Chocolate Muffin",
+    desc: "Soft muffin loaded with rich chocolate chips.",
+    price: "$3.00",
+    img: "/food/muffin.png",
+    category: "food",
+  },
+  {
+    name: "Club Sandwich",
+    desc: "Grilled sandwich with chicken, lettuce, and mayo.",
+    price: "$5.50",
+    img: "/food/pngwing.com (23).png",
+    category: "food",
+  },
+  {
+    name: "Cheesecake",
+    desc: "Creamy dessert with a buttery biscuit base.",
+    price: "$4.25",
+    img: "/food/pngwing.com (24).png",
+    category: "food",
   },
 ];
 

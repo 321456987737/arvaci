@@ -19,7 +19,7 @@ const drinks = [
     name: "Latte",
     desc: "Smooth espresso blended with creamy milk.",
     price: "$4.75",
-    img: "/coffee/latte.webp",
+    img: "/coffee/Latte.webp",
   },
   {
     name: "Cold Brew",
