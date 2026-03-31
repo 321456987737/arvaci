@@ -1,17 +1,17 @@
 export const blogs = [
   {
-    slug: "coffee-culture-pakistan",
-    title: "Coffee Culture in Pakistan",
-    desc: "How coffee culture is growing rapidly in Pakistan’s urban cities.",
-    img: "/herosection.jpeg",
+    slug: "coffee-culture-United-states",
+    title: "Coffee Culture in United-states",
+    desc: "How coffee culture is growing rapidly in United-states’s urban cities.",
+    img: "/gallery/1.webp",
     category: "Culture",
     author: "Iftikhar Ali",
     date: "2026-03-20",
     readTime: "5 min read",
-    tags: ["coffee", "culture", "pakistan"],
+    tags: ["coffee", "culture", "United-states"],
 
     content: `
-Coffee culture in Pakistan is evolving quickly. From Karachi to Lahore, cafes are becoming social hubs where people meet, work, and relax.
+Coffee culture in United-states is evolving quickly. From Karachi to Lahore, cafes are becoming social hubs where people meet, work, and relax.
 
 Young entrepreneurs are introducing specialty coffee, modern brewing techniques, and international café aesthetics.
     `,
@@ -27,7 +27,7 @@ Young entrepreneurs are introducing specialty coffee, modern brewing techniques,
     slug: "best-coffee-beans",
     title: "Best Coffee Beans in 2026",
     desc: "A complete guide to selecting premium coffee beans for perfect taste.",
-    img: "/herosection.jpeg",
+    img: "/gallery/2.webp",
     category: "Guide",
     author: "Iftikhar Ali",
     date: "2026-03-18",
@@ -41,7 +41,7 @@ Arabica beans are smooth and aromatic, while Robusta offers stronger caffeine an
     `,
 
     relatedBlogs: [
-      "coffee-culture-pakistan",
+      "coffee-culture-United-states",
       "home-brewing-guide",
       "espresso-vs-latte"
     ],
@@ -51,7 +51,7 @@ Arabica beans are smooth and aromatic, while Robusta offers stronger caffeine an
     slug: "coffee-shop-design",
     title: "Modern Coffee Shop Design Trends",
     desc: "Interior design trends shaping modern cafés in 2026.",
-    img: "/herosection.jpeg",
+    img: "/gallery/7.jpg",
     category: "Design",
     author: "Iftikhar Ali",
     date: "2026-03-15",
@@ -65,7 +65,7 @@ Comfort and ambiance are now as important as coffee quality.
     `,
 
     relatedBlogs: [
-      "coffee-culture-pakistan",
+      "coffee-culture-United-states",
       "best-coffee-beans",
       "home-brewing-guide"
     ],
@@ -75,7 +75,7 @@ Comfort and ambiance are now as important as coffee quality.
     slug: "home-brewing-guide",
     title: "Home Brewing Coffee Guide",
     desc: "Learn how to make café-style coffee at home.",
-    img: "/herosection.jpeg",
+    img: "/gallery/8.jpg",
     category: "Guide",
     author: "Iftikhar Ali",
     date: "2026-03-12",
@@ -91,7 +91,7 @@ The key is grind size, water temperature, and timing.
     relatedBlogs: [
       "best-coffee-beans",
       "espresso-vs-latte",
-      "coffee-culture-pakistan"
+      "coffee-culture-United-states"
     ],
   },
 
@@ -99,7 +99,7 @@ The key is grind size, water temperature, and timing.
     slug: "espresso-vs-latte",
     title: "Espresso vs Latte: Key Differences",
     desc: "Understanding the difference between espresso and latte.",
-    img: "/herosection.jpeg",
+    img: "/gallery/5.jpg",
     category: "Guide",
     author: "Iftikhar Ali",
     date: "2026-03-10",
@@ -115,7 +115,7 @@ Both have unique flavors depending on preparation.
     relatedBlogs: [
       "best-coffee-beans",
       "home-brewing-guide",
-      "coffee-culture-pakistan"
+      "coffee-culture-United-states"
     ],
   },
 
@@ -123,7 +123,7 @@ Both have unique flavors depending on preparation.
     slug: "coffee-health-benefits",
     title: "Health Benefits of Coffee",
     desc: "Why moderate coffee consumption is good for your health.",
-    img: "/herosection.jpeg",
+    img: "/gallery/6.jpg",
     category: "Health",
     author: "Iftikhar Ali",
     date: "2026-03-08",

@@ -9,14 +9,14 @@ export default function GallerySection() {
   const [activeImage, setActiveImage] = useState(null);
 
   const images = [
-    "/herosection.jpeg",
-    "/herosection.jpeg",
-    "/herosection.jpeg",
-    "/herosection.jpeg",
-    "/herosection.jpeg",
-    "/herosection.jpeg",
-    "/herosection.jpeg",
-    "/herosection.jpeg",
+    "/gallery/1.webp",
+    "/gallery/2.webp",
+    "/gallery/10.jpg",
+    "/gallery/9.jpg",
+    "/gallery/5.jpg",
+    "/gallery/6.jpg",
+    "/gallery/7.jpg",
+    "/gallery/8.jpg",
   ];
 
   return (

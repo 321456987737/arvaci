@@ -6,7 +6,12 @@ import { blogs } from "@/lib/blogs";
 import { motion } from "framer-motion";
 
 export default function BlogPage() {
-
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // smooth animation
+  });
+};
   return (
     <div className="w-full h-full bg-white">
       <section className="max-w-7xl mx-auto px-6 md:pb-20 md:pt-12 py-6">
@@ -34,6 +39,7 @@ export default function BlogPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {blogs.map((blog, index) => (
             <motion.div
+               onClick={scrollToTop}
               key={blog.slug}
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
