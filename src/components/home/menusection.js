@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 const drinks = [
   {
     name: "Espresso",
@@ -117,6 +118,13 @@ export default function Menusection() {
   </motion.div>
 ))}
         </motion.div>
+        <div className="flex w-full items-center justify-center">
+            <Link href="/Menu">
+              <button className="mt-6 px-6 py-3 cursor-pointer border text-black rounded-md transition hover:scale-105">
+                Visit Menu
+              </button>
+            </Link>
+        </div>
       </div>
     </section>
   );
