@@ -17,21 +17,21 @@ export default function CafeExperienceProfessional() {
     {
       title: "Work-Friendly",
       desc: "Fast Wi-Fi, power outlets, and calm background music make it perfect for focus.",
-      img: "/herosection.jpeg",
+      img: "/1.webp",
       icon: Laptop,
       reverse: true
     },
     {
       title: "Interior Design",
       desc: "Natural textures, curated décor, and stylish touches throughout the café.",
-      img: "/herosection.jpeg",
+      img: "/2.webp",
       icon: Coffee,
       reverse: false
     },
     {
       title: "Perfect Meetings",
       desc: "Private corners and communal tables for collaboration or quiet chats.",
-      img: "/herosection.jpeg",
+      img: "/3.webp",
       icon: RockingChair,
       reverse: true
     }
@@ -49,7 +49,7 @@ export default function CafeExperienceProfessional() {
 
   return (
     <section className="md:py-20 py-8 bg-[#faf7f4]">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 overflow-x-hidden">
 
         {/* Header */}
         <motion.div
