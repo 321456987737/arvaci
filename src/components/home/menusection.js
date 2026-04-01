@@ -118,7 +118,7 @@ export default function Menusection() {
   </motion.div>
 ))}
         </motion.div>
-        <div className="flex w-full items-center justify-center">
+        <div className="flex w-full items-center justify-center mt-6">
             <Link href="/Menu">
               <button className="mt-6 px-6 py-3 cursor-pointer border text-black rounded-md transition hover:scale-105">
                 Visit Menu
