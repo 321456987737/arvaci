@@ -5,6 +5,7 @@
 .Arimo {
   font-family: "Philosopher", cursive;
 }
+
 .parent {
     display: grid;
     grid-template-columns: 1fr;

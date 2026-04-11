@@ -94,11 +94,13 @@ export default function Menusection() {
   >
     {/* Image */}
     <div className="relative flex justify-center items-center mb-6 h-[150px]">
-      <Image
+       <Image
         src={drink.img}
         alt={drink.name}
-        fill
-        className="object-contain group-hover:scale-110 transition duration-300"
+        loading="eager"
+        width={120}
+        height={0}
+        className="object-contain w-full h-full group-hover:scale-110 transition duration-300"
       />
     </div>
 
