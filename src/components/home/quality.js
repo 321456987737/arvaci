@@ -83,7 +83,7 @@ const ContactSection = () => {
         <iframe
           src="https://maps.google.com/maps?q=ARVACI%20coffee%20340%20W%2037th%20St%20New%20York&t=h&z=15&ie=UTF8&iwloc=&output=embed"
           className="w-full h-full border-0"
-          loading="lazy"
+          loading="fast"
         ></iframe>
       </div>
     </section>
