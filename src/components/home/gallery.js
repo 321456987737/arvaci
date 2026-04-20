@@ -49,7 +49,7 @@ const Gallery = () => {
             whileInView={{ y: 0 , opacity:1 }}
             
           viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.4, duration: 0.4 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
             className="row-span-3 min-h-28 rounded-lg  flex items-center justify-center bg-slate-100 md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-1 xl:col-span-2 xl:row-span-2"
           >
             {/* <strong>Div 1</strong> */}
@@ -68,7 +68,7 @@ const Gallery = () => {
             whileInView={{ y: 0 , opacity:1 }}
             
           viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.4, duration: 0.4 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
             className="col-start-1 row-start-4 min-h-20 rounded-lg flex items-center justify-center bg-slate-200 md:col-start-3 md:row-start-1 xl:col-start-3 xl:row-start-1"
           >
             <Image
@@ -102,7 +102,7 @@ const Gallery = () => {
           
           viewport={{ once: true, amount: 0.3 }}
             whileInView={{ y: 0 , opacity:1 }}
-            transition={{ delay: 0.4, duration: 0.4 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
             className="row-span-2 col-start-1 row-start-5 min-h-20 rounded-lg  flex items-center justify-center bg-slate-400 md:col-start-3 md:row-start-4 md:row-end-5  xl:col-start-1 xl:row-start-4 xl:row-end-5 "
           >
             <Image
@@ -133,7 +133,7 @@ const Gallery = () => {
             whileInView={{ y: 0 , opacity:1 }}
             
           viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.4, duration: 0.4 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
             className="row-span-2 col-start-2 row-start-5 min-h-20 rounded-lg  flex items-center justify-center bg-slate-500 md:col-start-2 md:row-start-3 md:row-end-3 xl:row-span-2 xl:col-start-3 xl:row-start-2"
           >
             <Image
@@ -150,7 +150,7 @@ const Gallery = () => {
           
           viewport={{ once: true, amount: 0.3 }}
             whileInView={{ y: 0 , opacity:1 }}
-            transition={{ delay: 0.4, duration: 0.4 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
             className="col-start-2 row-start-2 min-h-20 rounded-lg  flex items-center justify-center bg-slate-600 md:col-start-1 md:row-start-3 xl:col-start-3 xl:row-start-4"
           >
             <Image
@@ -167,7 +167,7 @@ const Gallery = () => {
           
           viewport={{ once: true, amount: 0.3 }}
             whileInView={{ y: 0 , opacity:1 }}
-            transition={{ delay: 0.4, duration: 0.4 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
             className="col-start-2 row-start-1 min-h-24 rounded-lg flex items-center justify-center bg-slate-700 md:col-span-2 md:col-start-1 md:row-start-4 xl:row-span-2 xl:col-start-2 xl:col-end-2 xl:row-start-3"
           >
             <Image
